@@ -1,0 +1,21 @@
+{
+    "name": "youtube_filter",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "You're tool for filtering youtube searches",
+    "content_scripts":[
+        {
+            "matches" :["https://www.youtube.com/*"],
+            "js" : ["background.js"]
+        }
+    ]
+    ,
+    "browser_action": {
+        "default_title": "youtube_filter",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "https://www.youtube.com/*",
+        "tabs"
+    ]
+}
